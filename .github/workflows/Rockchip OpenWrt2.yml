@@ -3,7 +3,7 @@ name: Rockchip OpenWrt2
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 16 * * *
+    - cron: 0 16 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
