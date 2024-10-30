@@ -111,7 +111,7 @@ sed -i "s/${orig_version}/R${date_version} /g" package/lean/default-settings/fil
 sed -i 's/TARGET_CFLAGS.*/TARGET_CFLAGS += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/g' feeds/packages/utils/xfsprogs/Makefile
 
 # 修改
-#sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=5.10/g' target/linux/rockchip/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=5.10/g' target/linux/rockchip/Makefile
 
 # 修改 Makefile
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' {}
